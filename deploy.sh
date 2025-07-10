@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "أول رفع للمشروع"
+git branch -M main
+git remote add origin https://github.com/leno-star/M-ai-tool.git
+git push -u origin main --force
