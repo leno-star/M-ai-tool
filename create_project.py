@@ -1,12 +1,12 @@
 import os
 
-# إنشاء مجلد المشروع
-os.makedirs("M-ai-tool/templates", exist_ok=True)
-os.makedirs("M-ai-tool/static", exist_ok=True)
+# إنشاء المجلدات الأساسية مباشرة داخل المشروع
+os.makedirs("templates", exist_ok=True)
+os.makedirs("static", exist_ok=True)
 
 # الملفات ومحتواها
 files = {
-    "M-ai-tool/app.py": '''from flask import Flask, render_template, request
+    "app.py": '''from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -32,14 +32,14 @@ if __name__ == "__main__":
     app.run(debug=True)
 ''',
 
-    "M-ai-tool/requirements.txt": "flask\ngunicorn",
-    "M-ai-tool/Procfile": "web: gunicorn app:app",
-    "M-ai-tool/README.md": "# M-ai-tool\n\nأداة ذكية لتوليد سكريبتات تسويقية.",
-    "M-ai-tool/templates/index.html": "<h1>📸 أداة توليد السكريبتات</h1>",
-    "M-ai-tool/templates/scripts.html": "<h1>📜 السكريبتات المحفوظة</h1>",
-    "M-ai-tool/static/style.css": "body { font-family: Arial; }",
-    "M-ai-tool/scripts.txt": "",
-    "M-ai-tool/subscribers.txt": ""
+    "requirements.txt": "flask\ngunicorn",
+    "Procfile": "web: gunicorn app:app",
+    "README.md": "# M-ai-tool\n\nأداة ذكية لتوليد سكريبتات تسويقية.",
+    "templates/index.html": "<h1>📸 أداة توليد السكريبتات</h1>",
+    "templates/scripts.html": "<h1>📜 السكريبتات المحفوظة</h1>",
+    "static/style.css": "body { font-family: Arial; }",
+    "scripts.txt": "",
+    "subscribers.txt": ""
 }
 
 # إنشاء الملفات
@@ -47,4 +47,4 @@ for path, content in files.items():
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
 
-print("✅ تم إنشاء مشروع M-ai-tool بنجاح!")
+print("✅ تم إنشاء مشروع M-ai-tool بنجاح بدون أي تعارض في المجلدات!")
