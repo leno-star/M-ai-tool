@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+print("مرحبًا بك في مولد السكربتات!")
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
